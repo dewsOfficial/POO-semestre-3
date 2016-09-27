@@ -1,0 +1,7 @@
+Exercice 2
+1. Non, on peut pas mettre plusieurs classes dans un meme fichier.
+2.
+"Je m'appelle : Tony Parker J'ai 29 ans.
+Je m'appelle : Mickael Parker J'ai 29 ans."
+3. On peut rendre public l'attribut nom dans la classe Personne ou alors créer une fonction setNom public.
+4. Oui, on aurait eu le droit d'écrire cela.
