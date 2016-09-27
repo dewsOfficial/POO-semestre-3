@@ -5,3 +5,5 @@ Exercice 2
 Je m'appelle : Mickael Parker J'ai 29 ans."
 3. On peut rendre public l'attribut nom dans la classe Personne ou alors créer une fonction setNom public.
 4. Oui, on aurait eu le droit d'écrire cela.
+Exercice 3
+3. La plus judicieuse serait de faire une fonction non static pour pouvoir placer l'attribut monnaie ainsi en private.
