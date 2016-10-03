@@ -1,0 +1,19 @@
+Exercice 1
+1. Elle est associé à une classe.
+2. Cela permet d'associer plusieurs constructeur avec différents parametres à un meme classe.
+3. null est instanceof
+4. System est une classe. Et out est un atribut de System. Cet attribut a lui meme un un sous attribut print.
+
+Exercice 2
+A.java:Error: ; expected
+    return(this.attr = b.attr)
+1 error
+
+Exercice 3
+2. Ce n'est pas compatible
+3. Oui car c'est un objet
+4.
+
+Exercice 4
+6. Oui
+7. 
