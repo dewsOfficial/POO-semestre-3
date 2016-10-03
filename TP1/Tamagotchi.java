@@ -1,6 +1,6 @@
 class Tamagotchi{
     private int maxEnergie;
-    private int energie;
+    public int energie;
     private String nom;
 
     public Tamagotchi(String a){
