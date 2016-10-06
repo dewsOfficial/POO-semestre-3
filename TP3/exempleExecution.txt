@@ -1,0 +1,572 @@
+***************************************
+
+Ceci est un exemple d'exécution d'un programme complètement implémenté
+Les choix faits ici n'ont pas forcément à être les votres : il peut être plus simple de lire les informations d'un coup une à une plutôt que les trois d'un coup, et de n'utiliser que des chiffres pour les coordonnées, et non des lettres.
+
+Par exemple, on pourrait poser les questions :
+ -Que voulez-vous faire ?
+ (0) révéler (1) poser un drapeau (2) enlever un drapeau
+ -En quel x ?
+ -En quel y?
+
+Plutôt que de lire un triplet comme ici.
+
+De même, toute la partie où l'on demande les paramètres du jeu n'est pas prioritaire, et peut n'être faite que dans un second temps, voir pas du tout.
+
+L'affichage peut aussi être moins travaillé.
+
+***************************************
+
+Bonjour à ce jeu de démineur !
+Quel est votre nom ?
+Luc
+Bonjour Luc !
+Voulez-vous jouer ?
+oui
+Les paramètres par défaut sont :
+ hauteur : 9
+ largeur : 9
+ mines : 9
+Voulez-vous les changer ?
+oui
+Quelle hauteur ?
+5
+Quelle largeur ?
+5
+Combien de mines ?
+5
+Ok, c'est parti !
+****************
+*Mines/Drapeaux*
+*   5 / 0      *
+****************
+  12345
+A      
+B      
+C      
+D      
+E      
+
+Choisissez une action :
+p B 2
+****************
+*Mines/Drapeaux*
+*   5 / 1      *
+****************
+  12345
+A      
+B  ?   
+C      
+D      
+E      
+
+Choisissez une action :
+e B 2
+****************
+*Mines/Drapeaux*
+*   5 / 0      *
+****************
+  12345
+A      
+B      
+C      
+D      
+E      
+
+Choisissez une action :
+r B 2
+****************
+*Mines/Drapeaux*
+*   5 / 0      *
+****************
+  12345
+A      
+B  1   
+C      
+D      
+E      
+
+Choisissez une action :
+r B 3
+****************
+*Mines/Drapeaux*
+*   5 / 0      *
+****************
+  12345
+A      
+B  11  
+C      
+D      
+E      
+
+Choisissez une action :
+r C 4
+****************
+*Mines/Drapeaux*
+*   5 / 0      *
+****************
+  12345
+A      
+B  11  
+C    1 
+D      
+E      
+
+Choisissez une action :
+r D 2
+****************
+*Mines/Drapeaux*
+*   5 / 0      *
+****************
+  12345
+A 1#12#
+B 1112#
+C 11111
+D 2#200
+E 2#200
+
+Ouch...
+Voulez-vous rejouer ?
+oui
+Les paramètres par défaut sont :
+ hauteur : 5
+ largeur : 5
+ mines : 5
+Voulez-vous les changer ?
+oui
+Quelle hauteur ?
+9
+Quelle largeur ?
+9
+Combien de mines ?
+9
+Ok, c'est parti !
+****************
+*Mines/Drapeaux*
+*   9 / 0      *
+****************
+  123456789
+A          
+B          
+C          
+D          
+E          
+F          
+G          
+H          
+I          
+
+Choisissez une action :
+r C 3
+****************
+*Mines/Drapeaux*
+*   9 / 0      *
+****************
+  123456789
+A          
+B          
+C   1      
+D          
+E          
+F          
+G          
+H          
+I          
+
+Choisissez une action :
+r C 4       
+****************
+*Mines/Drapeaux*
+*   9 / 0      *
+****************
+  123456789
+A 00001    
+B 11101 211
+C   1011100
+D   1000011
+E   110001 
+F    10012 
+G    1001  
+H    1112  
+I          
+
+Choisissez une action :
+p B 6
+****************
+*Mines/Drapeaux*
+*   9 / 1      *
+****************
+  123456789
+A 00001    
+B 11101?211
+C   1011100
+D   1000011
+E   110001 
+F    10012 
+G    1001  
+H    1112  
+I          
+
+Choisissez une action :
+r A 6
+****************
+*Mines/Drapeaux*
+*   9 / 1      *
+****************
+  123456789
+A 000011   
+B 11101?211
+C   1011100
+D   1000011
+E   110001 
+F    10012 
+G    1001  
+H    1112  
+I          
+
+Choisissez une action :
+r A 7
+****************
+*Mines/Drapeaux*
+*   9 / 1      *
+****************
+  123456789
+A 0000112  
+B 11101?211
+C   1011100
+D   1000011
+E   110001 
+F    10012 
+G    1001  
+H    1112  
+I          
+
+Choisissez une action :
+p A 8
+****************
+*Mines/Drapeaux*
+*   9 / 2      *
+****************
+  123456789
+A 0000112? 
+B 11101?211
+C   1011100
+D   1000011
+E   110001 
+F    10012 
+G    1001  
+H    1112  
+I          
+
+Choisissez une action :
+r A 9
+****************
+*Mines/Drapeaux*
+*   9 / 2      *
+****************
+  123456789
+A 0000112?1
+B 11101?211
+C   1011100
+D   1000011
+E   110001 
+F    10012 
+G    1001  
+H    1112  
+I          
+
+Choisissez une action :
+p C 2
+****************
+*Mines/Drapeaux*
+*   9 / 3      *
+****************
+  123456789
+A 0000112?1
+B 11101?211
+C  ?1011100
+D   1000011
+E   110001 
+F    10012 
+G    1001  
+H    1112  
+I          
+
+Choisissez une action :
+r C 1
+****************
+*Mines/Drapeaux*
+*   9 / 3      *
+****************
+  123456789
+A 0000112?1
+B 11101?211
+C 1?1011100
+D   1000011
+E   110001 
+F    10012 
+G    1001  
+H    1112  
+I          
+
+Choisissez une action :
+r D 1
+****************
+*Mines/Drapeaux*
+*   9 / 3      *
+****************
+  123456789
+A 0000112?1
+B 11101?211
+C 1?1011100
+D 1 1000011
+E   110001 
+F    10012 
+G    1001  
+H    1112  
+I          
+
+Choisissez une action :
+r E 1
+****************
+*Mines/Drapeaux*
+*   9 / 3      *
+****************
+  123456789
+A 0000112?1
+B 11101?211
+C 1?1011100
+D 111000011
+E 01110001 
+F 01 10012 
+G 0111001  
+H 0011112  
+I 001      
+
+Choisissez une action :
+p F 3
+****************
+*Mines/Drapeaux*
+*   9 / 4      *
+****************
+  123456789
+A 0000112?1
+B 11101?211
+C 1?1011100
+D 111000011
+E 01110001 
+F 01?10012 
+G 0111001  
+H 0011112  
+I 001      
+
+Choisissez une action :
+p I 4
+****************
+*Mines/Drapeaux*
+*   9 / 5      *
+****************
+  123456789
+A 0000112?1
+B 11101?211
+C 1?1011100
+D 111000011
+E 01110001 
+F 01?10012 
+G 0111001  
+H 0011112  
+I 001?     
+
+Choisissez une action :
+r I 6
+****************
+*Mines/Drapeaux*
+*   9 / 5      *
+****************
+  123456789
+A 0000112?1
+B 11101?211
+C 1?1011100
+D 111000011
+E 01110001 
+F 01?10012 
+G 0111001  
+H 0011112  
+I 001? 1   
+
+Choisissez une action :
+r I 5
+****************
+*Mines/Drapeaux*
+*   9 / 5      *
+****************
+  123456789
+A 0000112?1
+B 11101?211
+C 1?1011100
+D 111000011
+E 01110001 
+F 01?10012 
+G 0111001  
+H 0011112  
+I 001?11   
+
+Choisissez une action :
+p I 7
+****************
+*Mines/Drapeaux*
+*   9 / 6      *
+****************
+  123456789
+A 0000112?1
+B 11101?211
+C 1?1011100
+D 111000011
+E 01110001 
+F 01?10012 
+G 0111001  
+H 0011112  
+I 001?11?  
+
+Choisissez une action :
+p G 8
+****************
+*Mines/Drapeaux*
+*   9 / 7      *
+****************
+  123456789
+A 0000112?1
+B 11101?211
+C 1?1011100
+D 111000011
+E 01110001 
+F 01?10012 
+G 0111001? 
+H 0011112  
+I 001?11?  
+
+Choisissez une action :
+p E 9
+****************
+*Mines/Drapeaux*
+*   9 / 8      *
+****************
+  123456789
+A 0000112?1
+B 11101?211
+C 1?1011100
+D 111000011
+E 01110001?
+F 01?10012 
+G 0111001? 
+H 0011112  
+I 001?11?  
+
+Choisissez une action :
+r G 9
+****************
+*Mines/Drapeaux*
+*   9 / 8      *
+****************
+  123456789
+A 0000112?1
+B 11101?211
+C 1?1011100
+D 111000011
+E 01110001?
+F 01?10012 
+G 0111001?1
+H 0011112  
+I 001?11?  
+
+Choisissez une action :
+r H 9
+****************
+*Mines/Drapeaux*
+*   9 / 8      *
+****************
+  123456789
+A 0000112?1
+B 11101?211
+C 1?1011100
+D 111000011
+E 01110001?
+F 01?10012 
+G 0111001?1
+H 0011112 2
+I 001?11?  
+
+Choisissez une action :
+r H 8
+****************
+*Mines/Drapeaux*
+*   9 / 8      *
+****************
+  123456789
+A 0000112?1
+B 11101?211
+C 1?1011100
+D 111000011
+E 01110001?
+F 01?10012 
+G 0111001?1
+H 001111232
+I 001?11?  
+
+Choisissez une action :
+r I 8
+****************
+*Mines/Drapeaux*
+*   9 / 8      *
+****************
+  123456789
+A 0000112?1
+B 11101?211
+C 1?1011100
+D 111000011
+E 01110001?
+F 01?10012 
+G 0111001?1
+H 001111232
+I 001?11?2 
+
+Choisissez une action :
+p I9
+Mauvais nombre d'arguments : 2
+p I 9
+****************
+*Mines/Drapeaux*
+*   9 / 9      *
+****************
+  123456789
+A 0000112?1
+B 11101?211
+C 1?1011100
+D 111000011
+E 01110001?
+F 01?10012 
+G 0111001?1
+H 001111232
+I 001?11?2?
+
+Choisissez une action :
+r F 9
+****************
+*Mines/Drapeaux*
+*   9 / 9      *
+****************
+  123456789
+A 0000112?1
+B 11101?211
+C 1?1011100
+D 111000011
+E 01110001?
+F 01?100122
+G 0111001?1
+H 001111232
+I 001?11?2?
+
+Bravo !
+Voulez-vous rejouer ?
+non
+Au revoir Luc...
