@@ -3,10 +3,23 @@ public class Jeu {
     private Plateau lePlateau;
     
     public Jeu(Joueur leJoueur, Plateau lePlateau){
-        //A remplir
+        this.leJoueur = leJoueur;
+	this.lePlateau = lePlateau;
     }
 
     public boolean jouer(){
-        //A remplir
+	while(!lePlateau.jeuFini()){
+	    System.out.println(lePlateau.affichage());
+	    System.out.println("Choisissez une action :");
+	    int[] action = leJoueur.actionChoisie();
+	    while(!lePlateau.agir(action)){
+		System.out.println("Action interdite, recommencez :");
+		action = leJoueur.actionChoisie();
+	    }
+	}
+
+	System.out.println(lePlateau.affichage());
+	
+	return lePlateau.jeuGagne();
     }
 }
