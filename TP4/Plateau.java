@@ -12,14 +12,7 @@ class Plateau{
                 if((i+j)%2 == 0){
                     cases[a].setCouleur(true);
                 }
-                if(i == 0 || i == 1 || i == 7 || i == 6){
-                    cases[a].fill(new Piece());
-                    if(i == 0 || i == 1){
-                        cases[a].getPiece().setCouleur(true);
-                    }else{
-                        cases[a].getPiece().setCouleur(false);
-                    }
-                }
+
                 cases[a].Coordonne(i,j);
                 a++;
             }
@@ -49,5 +42,30 @@ class Plateau{
         }else{
             return false;
         }
+    }
+    public void initialisation(){
+        this.cases[0].fill(new Tour());
+        this.cases[1].fill(new Cavalier());
+        this.cases[2].fill(new Fou());
+        this.cases[3].fill(new Dame());
+        this.cases[4].fill(new Roi());
+        this.cases[5].fill(new Fou());
+        this.cases[6].fill(new Cavalier());
+        this.cases[7].fill(new Tour());
+        for(int i = 0;i<8;i++){
+            this.cases[8+i].fill(new Pion());
+            this.cases[63-8-i].fill(new Pion());
+        }
+        for(int j = 0;j<16;j++){
+            this.cases[j].getPiece().setCouleur(true);
+        }
+        this.cases[63].fill(new Tour());
+        this.cases[62].fill(new Cavalier());
+        this.cases[61].fill(new Fou());
+        this.cases[59].fill(new Dame());
+        this.cases[60].fill(new Roi());
+        this.cases[58].fill(new Fou());
+        this.cases[57].fill(new Cavalier());
+        this.cases[56].fill(new Tour());
     }
 }

@@ -27,7 +27,7 @@ class Case{
     //////
     public String toString(){
         if(this.piece != null){
-            return " P ";
+            return this.piece.toString();
         }
         if(this.couleur){
             return " B ";
