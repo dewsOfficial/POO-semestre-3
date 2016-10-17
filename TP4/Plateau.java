@@ -12,6 +12,14 @@ class Plateau{
                 if((i+j)%2 == 0){
                     cases[a].setCouleur(true);
                 }
+                if(i == 0 || i == 1 || i == 7 || i == 6){
+                    cases[a].fill(new Piece());
+                    if(i == 0 || i == 1){
+                        cases[a].getPiece().setCouleur(true);
+                    }else{
+                        cases[a].getPiece().setCouleur(false);
+                    }
+                }
                 cases[a].Coordonne(i,j);
                 a++;
             }
@@ -33,5 +41,13 @@ class Plateau{
             }
         }
         return null;
+    }
+    public boolean deplace(Mouvement m, boolean joueur){
+        if(m.isValid(this,joueur)){
+            m.faire(this);
+            return true;
+        }else{
+            return false;
+        }
     }
 }
