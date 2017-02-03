@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Joueur {
     private String nom;
     private Scanner scan;
-    
+
     public Joueur(){
 	scan = new Scanner(System.in);
         nom = "Anonyme";
@@ -11,7 +11,7 @@ public class Joueur {
 
     public void setNom(){
         System.out.println("Quel est votre nom ?");
-	nom = scan.nextLine();
+	    nom = scan.nextLine();
 	System.out.println("Bonjour "+nom+" !");
     }
 
@@ -32,7 +32,7 @@ public class Joueur {
 	else
 	    return false;
     }
-    
+
     public int nombreChoisi(){
 	String ans = scan.nextLine();
 	int result = 0;
@@ -40,16 +40,16 @@ public class Joueur {
         do{
 	    error = false;
 	    try{
-		result = Integer.parseInt(ans);
+		          result = Integer.parseInt(ans);
 	    } catch(Exception e){
 		System.out.println("Pas un nombre");
 		ans = scan.nextLine();
 		error = true;
-	    }
-	} while (error);
-	return Integer.parseInt(ans);
+	       }
+	   } while (error);
+	   return Integer.parseInt(ans);
     }
-    
+
     public int[] actionChoisie(){
 	int[] action = new int[3];
 	boolean error = true;
@@ -97,11 +97,11 @@ public class Joueur {
 		    System.out.println("Mauvais troisième argument");
 		    error = true;
 		}
-		
+
 	    }
 	} while (error);
-	
-	
+
+
 	return action;
     }
 }
